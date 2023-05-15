@@ -1,8 +1,8 @@
 class ROI():
-    def __init__(self, income, expenses, cash_flow):
-        self.income = income
-        self.expenses = expenses
-        self.cash_flow = cash_flow
+    def __init__(self):
+        self.income = 0
+        self.expenses = 0
+        self.cash_flow = 0
 
     def Income(self):
         rental_income = float(input('Please enter the monthly rent: '))
@@ -62,7 +62,7 @@ class ROI():
             else:
                 print('Response not recognized, please try again')
     
-roi = ROI(0, 0, 0)
+roi = ROI()
 # print(roi.Income())
 # print(roi.Expenses())
 # print(roi.Cash_flow())
