@@ -13,17 +13,17 @@ class ROI():
             print(f'Your total monthly income is {self.income}')
     
     def Expenses(self):
-        tax_expense = float(input('Please enter monthly tax cost: '))
-        insurance_expense = float(input('Please enter monthly insurance cost: '))
-        utilities_expense = float(input('Please enter monthly utilities cost, if applicable: '))
-        HOA_expense = float(input('Please enter monthly HOA cost, if applicable: '))
-        lawn_snow_expense = float(input('Please enter monthly lawn and/or snow cost, if applicable: '))
-        vacancy_expense = float(input('Please enter how much you would like to save monthly in case of vacancy: '))
-        repairs_expense = float(input('Please enter how much you would like to save monthly for minor repairs: '))
-        capex_expense = float(input('Please enter how much you would like to save monthly for major repairs: '))
-        property_management_expense = float(input('Please enter monthly property management cost: '))
-        mortgage_expense = float(input('Please enter monthly mortgage cost: '))
-        total_monthly_expenses = tax_expense + insurance_expense + utilities_expense + HOA_expense + lawn_snow_expense + vacancy_expense + repairs_expense + capex_expense + property_management_expense + mortgage_expense
+        total_monthly_expenses = 0
+        total_monthly_expenses += float(input('Please enter monthly tax cost: '))
+        total_monthly_expenses += float(input('Please enter monthly insurance cost: '))
+        total_monthly_expenses += float(input('Please enter monthly utilities cost, if applicable: '))
+        total_monthly_expenses += float(input('Please enter monthly HOA cost, if applicable: '))
+        total_monthly_expenses += float(input('Please enter monthly lawn and/or snow cost, if applicable: '))
+        total_monthly_expenses += float(input('Please enter how much you would like to save monthly in case of vacancy: '))
+        total_monthly_expenses += float(input('Please enter how much you would like to save monthly for minor repairs: '))
+        total_monthly_expenses += float(input('Please enter how much you would like to save monthly for major repairs: '))
+        total_monthly_expenses += float(input('Please enter monthly property management cost: '))
+        total_monthly_expenses += float(input('Please enter monthly mortgage cost: '))
         self.expenses = total_monthly_expenses
         if self.expenses > 0:
             print(f'Your total monthly expenses are {self.expenses}')
@@ -41,7 +41,7 @@ class ROI():
         total_investment = down_payment + closing_costs + repair_budget + misc_budget
         annual_cash_flow = self.cash_flow * 12
         cash_on_cash = (annual_cash_flow / total_investment) * 100
-        print(f'Your cash on cash return on investment is {cash_on_cash}%')
+        print(f'Your cash on cash return on investment on this rental property is {cash_on_cash}%')
     
     def runner(self):
         print('Enter quit to exit')
