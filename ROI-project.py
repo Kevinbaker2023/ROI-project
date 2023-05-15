@@ -5,6 +5,7 @@ class ROI():
         self.cash_flow = 0
 
     def Income(self):
+        print('Please enter 0 or a number greater than 0')
         rental_income = float(input('Please enter the monthly rent: '))
         misc_income = float(input('Please enter any miscellaneous income: '))
         monthly_income = rental_income + misc_income
@@ -13,6 +14,7 @@ class ROI():
             print(f'Your total monthly income is {self.income}')
     
     def Expenses(self):
+        print('Please enter 0 or a number greater than 0')
         total_monthly_expenses = 0
         total_monthly_expenses += float(input('Please enter monthly tax cost: '))
         total_monthly_expenses += float(input('Please enter monthly insurance cost: '))
@@ -34,6 +36,7 @@ class ROI():
         print(f'Your total monthly cash flow is {self.cash_flow}')
     
     def Return_on_investment(self):
+        print('Please enter 0 or a number greater than 0')
         down_payment = float(input('Please enter your down payment: '))
         closing_costs = float(input('Please enter your closing costs: '))
         repair_budget = float(input('Please enter your repair budget: '))
