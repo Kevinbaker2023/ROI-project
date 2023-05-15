@@ -4,7 +4,7 @@ class ROI():
         self.expenses = 0
         self.cash_flow = 0
 
-    def Income(self):
+    def monthly_income(self):
         print('Please enter 0 or a number greater than 0')
         rental_income = float(input('Please enter the monthly rent: '))
         misc_income = float(input('Please enter any miscellaneous income: '))
@@ -13,7 +13,7 @@ class ROI():
         if self.income > 0:
             print(f'Your total monthly income is {self.income}')
     
-    def Expenses(self):
+    def monthly_expenses(self):
         print('Please enter 0 or a number greater than 0')
         total_monthly_expenses = 0
         total_monthly_expenses += float(input('Please enter monthly tax cost: '))
@@ -30,12 +30,12 @@ class ROI():
         if self.expenses > 0:
             print(f'Your total monthly expenses are {self.expenses}')
     
-    def Cash_flow(self):
+    def monthly_cash_flow(self):
         total_cash_flow = self.income - self.expenses
         self.cash_flow = total_cash_flow
         print(f'Your total monthly cash flow is {self.cash_flow}')
     
-    def Return_on_investment(self):
+    def return_on_investment(self):
         print('Please enter 0 or a number greater than 0')
         down_payment = float(input('Please enter your down payment: '))
         closing_costs = float(input('Please enter your closing costs: '))
@@ -50,18 +50,18 @@ class ROI():
         print('Enter quit to exit')
         
         while True:
-            response = input('Would you like to enter income, expenses, cash flow or return on investment?: ')
+            response = input('Would you like to enter income, expenses, cash flow or return on investment?: ').lower()
 
             if response == 'quit':
                 break
             elif response == 'income':
-                self.Income()
+                self.monthly_income()
             elif response == 'expenses':
-                self.Expenses()
+                self.monthly_expenses()
             elif response == 'cash flow':
-                self.Cash_flow()
+                self.monthly_cash_flow()
             elif response == 'return on investment':
-                self.Return_on_investment()
+                self.return_on_investment()
             else:
                 print('Response not recognized, please try again')
     
